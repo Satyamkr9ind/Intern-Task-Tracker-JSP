@@ -1,6 +1,6 @@
-# 🧑‍💻 Intern Task Tracker (JSP & Servlet)
+# Intern Task Tracker (JSP & Servlet)
 
-## 📌 Project Overview
+##  Project Overview
 The **Internship Management System** is a role-based web application developed using **JSP, Servlets, JDBC, HTML, CSS, and JavaScript**.  
 It is designed to manage interns, supervisors, and tasks efficiently in an internship environment.
 
@@ -17,7 +17,7 @@ Supervisors can assign and monitor tasks, while interns can track task progress,
 
 ---
 
-## 🗄️ Database Configuration
+## Database Configuration
 - **Database Name:** `project`
 
 ### Tables:
@@ -27,9 +27,9 @@ Supervisors can assign and monitor tasks, while interns can track task progress,
 
 ---
 
-## 👥 User Roles & Features
+##  User Roles & Features
 
-### 👨‍🎓 Intern
+### Intern
 - Secure login with session management
 - View intern profile and Intern ID
 - View assigned supervisor details
@@ -42,7 +42,7 @@ Supervisors can assign and monitor tasks, while interns can track task progress,
 
 ---
 
-### 👨‍🏫 Supervisor
+### Supervisor
 - Secure login
 - View assigned interns
 - Assign tasks to interns
@@ -52,18 +52,18 @@ Supervisors can assign and monitor tasks, while interns can track task progress,
 
 ---
 
-## ✨ Key Features
-- 🔐 Session-based authentication
-- 🚫 Unauthorized access prevention
-- 🔄 Browser back-button cache control
-- 📊 Dynamic task progress calculation
-- 📋 Role-based dashboards
-- 📡 AJAX-based task loading
-- 🧠 MVC architecture implementation
+## Key Features
+-  Session-based authentication
+-  Unauthorized access prevention
+-  Browser back-button cache control
+-  Dynamic task progress calculation
+-  Role-based dashboards
+-  AJAX-based task loading
+-  MVC architecture implementation
 
 ---
 
-## 📊 Intern Dashboard Highlights
+##  Intern Dashboard Highlights
 - Intern greeting with Intern ID
 - Supervisor assignment status
 - Task summary:
@@ -81,7 +81,7 @@ Supervisors can assign and monitor tasks, while interns can track task progress,
 
 ---
 
-## 🧱 Project Structure
+## Project Structure
 ```
 
 project/
@@ -107,7 +107,7 @@ project/
 
 ---
 
-## ⚙️ How to Run the Project
+##  How to Run the Project
 1. Clone this repository
 2. Open the project in **NetBeans / Eclipse**
 3. Configure **Apache Tomcat**
@@ -118,15 +118,12 @@ project/
 
 ---
 
-## 🎯 Learning Outcomes
+##  Learning Outcomes
 - Practical experience with JSP & Servlets
 - MVC architecture understanding
 - Session handling and security
 - JDBC database connectivity
-- Real-world internship workflow simulation
-
 ---
-
 ## 🚀 Future Enhancements
 - Password encryption
 - Admin module
