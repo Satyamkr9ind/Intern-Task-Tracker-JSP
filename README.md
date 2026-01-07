@@ -8,7 +8,7 @@ Supervisors can assign and monitor tasks, while interns can track task progress,
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 - **Frontend:** JSP, HTML5, CSS3, JavaScript  
 - **Backend:** Java Servlets, JDBC  
 - **Database:** MySQL  
