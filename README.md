@@ -118,13 +118,7 @@ project/
 
 ---
 
-##  Learning Outcomes
-- Practical experience with JSP & Servlets
-- MVC architecture understanding
-- Session handling and security
-- JDBC database connectivity
----
-## 🚀 Future Enhancements
+## Future Enhancements
 - Password encryption
 - Admin module
 - Email notifications
