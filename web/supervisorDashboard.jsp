@@ -70,7 +70,7 @@
             <%
                 int totalIntern = 0, totalTaskAssigned = 0, totalTaskCompleted = 0, totalTaskPending = 0;
                 if (ds != null && !ds.isEmpty()) {
-                    DashboardSummary first = ds.get(0); // all rows have same summary values
+                    DashboardSummary first = ds.get(0); 
                     totalIntern = first.getTotalIntern();
                     totalTaskAssigned = first.getTotalTaskAssigned();
                     totalTaskCompleted = first.getTotalTaskCompleted();
