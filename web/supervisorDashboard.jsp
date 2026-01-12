@@ -1,25 +1,24 @@
-<%-- Supervisor Dashboard with modal popup for viewing intern tasks --%>
 <%@page import="modal.Supervisor_detail" %>
 <%@page import="java.util.List" %>
 <%@page import="modal.DashboardSummary" %>
 
 <%
-    // Check for supervisor session
+    // Check  supervisor session
     String supName = (String) session.getAttribute("supervisorName");
     Integer supId = (Integer) session.getAttribute("SId");
 
     if (supName == null || supId == null) {
         // Redirect to login page if session expired
         response.sendRedirect(request.getContextPath() + "/login.jsp");
-        return; // stop further page execution
+        return; // stop  page execution
     }
 
-    // Prevent back button login
-    response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate"); // HTTP 1.1
-    response.setHeader("Pragma", "no-cache"); // HTTP 1.0
-    response.setHeader("Expires", "0"); // Proxies
+    // Prevent back button relogin
+    response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
+    response.setHeader("Pragma", "no-cache"); 
+    response.setHeader("Expires", "0"); 
 
-    // Get dashboard data from session (not request)
+    // Get dashboard data from session 
     List<DashboardSummary> ds = (List<DashboardSummary>) session.getAttribute("dashboardData");
 %>
 
@@ -127,7 +126,7 @@
 
 <div id="alertMessage" class="alert-message" style="display:none;"></div>
 
-    <!-- Modal -->
+    <!-- Modal Box-->
 
 <div id="taskModal" class="modal">
 
@@ -156,7 +155,7 @@
                     </tr>
                 </thead>
                 <tbody id="taskTableBody">
-                    <!-- Task rows injected via JS -->
+                    <!-- Task rows populated using JS -->
                 </tbody>
             </table>
         </div>
@@ -165,7 +164,6 @@
 
 </div>
 
-   <!--js file -->    
 <script src="script/dashboard.js"></script>    
 </body>
 </html>
