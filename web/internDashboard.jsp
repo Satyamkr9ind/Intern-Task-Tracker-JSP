@@ -3,21 +3,20 @@
 <%@ page import="modal.Taskcount" %>
 
 <%
-    // Get intern from session
+    // intern details from session
     Intern_detail intern = (Intern_detail) session.getAttribute("intern");
 
-    // Prevent unauthorized access
+    
     if (intern == null) {
         response.sendRedirect(request.getContextPath() + "/login.jsp");
         return; // stop page execution
     }
 
-    // Prevent back button login / caching
-    response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate"); // HTTP 1.1
-    response.setHeader("Pragma", "no-cache"); // HTTP 1.0
-    response.setHeader("Expires", "0"); // Proxies
+    // Prevent caching to prevent relogin
+    response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate"); 
+    response.setHeader("Pragma", "no-cache"); 
+    response.setHeader("Expires", "0"); 
 
-    // Get task count from session instead of request
     Taskcount task = (Taskcount) session.getAttribute("taskcount");
 %>
 
@@ -27,7 +26,7 @@
     <title>Intern Dashboard</title>
     <link rel="stylesheet" href="stylesheet/dashboard.css">
 
-    <!-- Declared internId globally for external JS -->
+    <!-- Declared internId globally for external access -->
     <script>
         var internId = <%= intern.getIid() %>;
         var role = '<%= session.getAttribute("role") %>';
@@ -94,21 +93,20 @@
                     </tr>
                 </thead>
                 <tbody id="taskTableBody">
-                    <!-- JS will dynamically populate rows here -->
+                    <!-- dynamically populate rows -->
                 </tbody>
             </table>
         </div>
     </div>
 </div>
 
-<!-- Include your external JS last -->
 <script src="script/dashboard.js"></script>
 
-<!-- Auto load tasks on page load -->
+<!-- Autoload task-->
 <script>
     document.addEventListener("DOMContentLoaded", () => {
         if (internId !== 0) { 
-           Task(internId); // populate tasks when page loads
+           Task(internId); // populate tasks after page loads
         } else {
             console.warn("Intern ID not found!");
         }
